@@ -1,0 +1,125 @@
+.games {
+    background-color: @color_white;
+    padding-top: 160px;
+    padding-bottom: 87px;
+    overflow: hidden;
+    .xs-block({
+        padding-top: 0;
+        padding-bottom: 64px;
+        background-color: @color_yellow;
+        
+    });
+
+    &-block {
+        .row-flex();
+        flex-wrap: nowrap;
+        .xs-block({
+            flex-direction: column;
+            
+            
+        });
+        &-img {
+            .shift-left(-1);
+            //.shift-right();
+            .size(8);
+            text-align: right;
+            position: relative;
+            padding-top: 50px;
+            .xs-block({
+                padding-top: 0;
+                
+            });
+            .page__img{
+                z-index: 30;
+                position: relative;
+            }
+            /*&::after{
+                content: '';
+                height: 100%;
+                width: 100%;
+                background: yellow;
+                position: absolute;
+                left: 5%;
+                top: 0;
+            }*/
+        }
+
+        &-content {
+            .size(6);
+            .shift-right(-0.5);
+            z-index: 20;
+            
+            &-format {
+                
+
+                .page__text {
+                    .size(3.5);
+                    padding: 4px 0 70px;
+                }
+
+                .page__title-h3, .page__text {
+                    color: @color_dark;
+                    padding-left: 130px;
+                    
+                    .xs-block({
+                        padding-left: 0;
+                        
+                        
+                    });
+                    
+                }
+
+                .page__title-h3 {
+                    .size-xs(12);
+                    padding-top: 20px;
+                    padding-bottom: 10px;
+                }
+
+                .page__text {
+                    .size-xs(5.5);
+                    .xs-block({
+                        padding-bottom: 30px;
+                    });
+                }
+
+                &-slider {
+                    text-align: center;
+                    background-color: @color_yellow;
+                    padding: 115px 120px 60px 40px;
+                    z-index: 40;
+                    .shift-left(-.5);
+
+                    .xs-block({
+                        padding: 0;
+                        
+                        
+                    });
+
+
+
+                    p {
+                        color: @color_white;
+                        font-family: "@{Dincondensedc}";
+                        font-size: 84px;
+                    }
+
+                    .page__btn {
+                        .size(3);
+                        .size-xs(5);
+                        .xs-block({
+                            margin-left: 40px;
+                            margin-top: 20px;
+                        });
+                        color: @color_dark;
+                        border: 1px solid @color_dark;
+                        margin-top: 65px;
+                        margin-left: 140px;
+                        padding-top: 5px;
+                        padding-bottom: 5px;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
