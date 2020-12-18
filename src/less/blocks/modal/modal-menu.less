@@ -14,36 +14,61 @@
         align-items: center;
         &-nav{
             .size(3);
+            .size-xs(6);
+          
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             padding: 56px 152px;
+            .md-block({
+                padding: 56px 50px;
+            });
+            .xs(padding, 0 10px 0);
             box-sizing: border-box;
             background-color: @color_dark;
-          
+            .page__img{
+               .xxs-block({
+                width: 10%;
+               });
+            }
             .page__nav{
                 display: flex;
                 flex-direction: column;
                 border-bottom: 1px solid @color_yellow;
                 padding-bottom: 40px;
                 margin-bottom: 35px;
+                .xs-block({
+                    margin-bottom: 25px;
+                    padding-bottom: 20px;
+                    
+                });
                 .page__link{
                     line-height: 40px;
                 }
                 .page__lists{
                     padding-left:20px; 
+                    .xxs(display, none);
                 }
             }
             .page__links{
                 display: flex;
                 justify-content: space-around;
                 margin-bottom: 35px;
+                .smm-block({
+                    flex-wrap: wrap;
+                    margin-bottom: 0;
+                    .page__link{
+                        margin-bottom: 15px;
+                    }
+                });
+                .xs(margin-bottom, 25px);
                 
             }
         }
         &-info{
             .size(3);
+            .xs(display, none);
             height: 100%;
             display: flex;
             flex-wrap: wrap;
@@ -85,7 +110,8 @@
             &::after{
                 width: 32px;
                 height: 1.5px;
-                background: @color_dark;          
+                background: @color_dark;      
+                .xs(background, @color_white);    
             }
         }
     }

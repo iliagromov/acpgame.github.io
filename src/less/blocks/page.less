@@ -1,20 +1,43 @@
 .page{
     position: relative;
     // background: #363636;
-    background:@color_black;
-    z-index: 1;
+    // background:@color_black;
+    // z-index: 1;
     // margin-bottom: 200px;
     height: 100%;
-    min-height: 100vh;
+    // min-height: 100vh;
     box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
     transition: all .35s;
     &__title {
         
         &-h1 {
-            font-family: "@{Noah}-Bold";
+            // font-family: "@{Noah}-Bold";
+            font-family: "@{Noah}-ExtraBold";
             text-transform: uppercase;
             font-size: 85px;
             line-height: 85px;
+            .sm-block({
+                font-size: 65px;
+                line-height: 100%;//65px
+            });
+
+            &_text-shadow{
+               &_white{
+                text-shadow: 
+                @color_white 1px 0px 0,
+                @color_white -1px 0px 0, 
+                @color_white 0px -1px 0, 
+                @color_white 0px 2px 0;
+               }  
+               &_gray{
+                text-shadow: 
+                @color_white 1px 0px 0,
+                @color_white -1px 0px 0, 
+                @color_white 0px -1px 0, 
+                @color_white 0px 2px 0;
+               }
+
+            }
         }
 
         &-h2 {
@@ -75,7 +98,9 @@
         text-decoration: none;
 
         border-radius: 2px;
-        height: 55px;
+        // height: 55px;
+        height: 70px;
+        box-sizing: border-box;
         font-size: 15px;
         letter-spacing: 1px;
         line-height: 30px;
@@ -84,12 +109,36 @@
         border: none;
         color: @color_white;
         background-color: transparent;
-        border: 1px solid @color_yellow;
+        border: 2px solid @color_yellow;
             &:hover{
                     color: #262626;
                     background-color: @color_white;
                     transition: all ease-out 0.5s;
                 }
+        &_menu{
+            position: relative;
+            .line::before,
+            &::before,
+            &::after{
+                content: '';
+                display: inline-block;
+                width: 26px;
+                left: 10px;
+                height: 3px;
+                border-radius: 3px;
+                background-color: #405466;
+                position: absolute;
+            }
+            &::before{
+                top: 13.9px;
+            }
+            &::after{
+                top: 21px;
+            }
+            .line::before{
+                top: 28px;
+            }
+        }
     }
     &__icon{
         &_facebook{
@@ -107,6 +156,9 @@
         &_menu{
             .sprite(@icon-hamburger);
         }
+        &_phone{
+            .sprite(@icon-phone);
+        }
     }
     &_yellow{
         color: @color_yellow;
@@ -116,11 +168,13 @@
     }
     &_desktop{
         display: block;
-        .xs(display, none);
+        // .xs(display, none);
+        .smm(display, none);
     }
     &_mobile{
         display: none;
-        .xs(display, block);
+        // .xs(display, block);
+        .smm(display, block);
     }
     &_hidden{
         display: none !important;

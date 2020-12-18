@@ -3,6 +3,9 @@
 
 .wrapper{
     .wrapper();
+    // для того чтобы между section и контентом был слой с линией //.bg-grid == wrapper
+    position: relative;
+    z-index: 15;
 }
 
 .scrollbar(@color_scrollbar-track, @color_scrollbar-thumb);
@@ -23,11 +26,17 @@
   .font(@Noah; '@{Noah}-Bold');
 }
 @font-face {
+  .font(@Noah; '@{Noah}-ExtraBold');
+}
+@font-face {
   .font(@Dincondensedc; @Dincondensedc);
 }
 
 body {
+  position: relative;
   font-family: @Gerbera;
+  background-color: @color_black;
+  transition: all .5s ease-out;
 }
 a, button{
   cursor: pointer;
@@ -43,7 +52,6 @@ input{
 }
 html:not([data-scroll='0']) .header {
  
-  top: 0;
   transition: all ease-out .5s;
  
 }
