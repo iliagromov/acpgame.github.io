@@ -28,6 +28,9 @@
             box-sizing: border-box;
             background-color: @color_dark;
             .page__img{
+                .xs-block({
+                    width: 18%;
+                });
                .xxs-block({
                 width: 10%;
                });
@@ -62,7 +65,13 @@
                         margin-bottom: 15px;
                     }
                 });
-                .xs(margin-bottom, 25px);
+
+                .xs-block({
+                    margin-bottom: 20px;
+                    .page__link{
+                        margin-bottom:0;
+                    }
+                });
                 
             }
         }
@@ -105,7 +114,9 @@
     }
     .modal__action{
         .page__btn_close{
-            padding: 0px 23px;
+            padding: 0px 25px;
+            height: auto;
+            min-height: 45px;
             &::before,
             &::after{
                 width: 32px;
