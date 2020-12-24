@@ -45,17 +45,8 @@
                     });
                     margin-top: 100px;
                     margin-bottom: 45px;
-                    text-shadow: 
-                    @color_white 1px 0px 0,
-                    @color_white -1px 0px 0, 
-                    @color_white 0px -1px 0, 
-                    @color_white 0px 1px 0;
-                    .page{
-                        &_yellow,
-                        &_white{
-                            text-shadow: none;
-                        }
-                    }
+                   
+                    
                 }
                 .page__btn {
                     .size(4);
@@ -118,7 +109,7 @@
                             });
                             .smm(display,none);
                             position: absolute;
-                            .sprite(@icon-arrow-long);
+                           .sprite(@icon-arrow-long-white);
                             top: 0;
                             right: -75px;
                         }
@@ -197,6 +188,7 @@
                 position: relative;
                 padding-left: 4px;
                 flex-basis: 10%;
+                
                 .md-block({
                     .slider-thumbnails{
                         display: flex;
@@ -213,20 +205,20 @@
                     }
                 });
                 .page__img_small{
-                    &:nth-of-type(1){
-                        // display: none;
-                    }
-                    + .tns-nav-active.page__img_small{
-                    }
-                    &:nth-of-type(n+4){
-                        display: none;
-                    }
+                    // &:nth-of-type(1){
+                    //     // display: none;
+                    // }
+                    // + .tns-nav-active.page__img_small{
+                    // }
+                    // &:nth-of-type(n+4){
+                    //     display: none;
+                    // }
                     &.tns-nav-active{
                         display: block !important;
                     }
-                    &.tns-nav-active + .page__img_small{
-                        display: block;
-                    }
+                    // &.tns-nav-active + .page__img_small{
+                    //     display: block;
+                    // }
                     .md-block({
                         margin: 0 2px;
                     });
@@ -341,7 +333,7 @@
             });
             &::after{
                 content: '';
-                .sprite(@icon-arrow-white);
+                .sprite(@icon-chevron-white);
                 display: inline-block;
             }
             &_hide{
