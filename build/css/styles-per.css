@@ -3183,6 +3183,7 @@ details[open] summary::after {
 
 .gallery-page {
   background-color: transparent;
+  overflow: hidden;
 }
 
 .gallery-page .page__title-h1 {
@@ -3225,7 +3226,6 @@ details[open] summary::after {
 
 .gallery-page .page-content .page-item {
   position: relative;
-  pointer-events: none;
   margin-top: 0;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
