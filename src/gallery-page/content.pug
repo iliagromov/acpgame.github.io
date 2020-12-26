@@ -3,7 +3,7 @@ mixin item(img,date,name)
         .page__img
             img(src=img, alt="")
             div.nav
-                a.page__link(href="../gallery/gallery.html") Смотреть фотоальбом
+                a.page__link(href="gallery/gallery.html") Смотреть фотоальбом
                 .page__link.open-modal( data-modal="modal-gallery") Быстрый просмотр
         .page__text.date=date
         .page__text.value=name
