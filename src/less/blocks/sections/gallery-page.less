@@ -41,12 +41,27 @@
    
         .page-item{
             position: relative;
-            pointer-events: none;
+            cursor: pointer;
+            // pointer-events: none;
             // .shift-right(.1);
             .shift-mmd-padding-left(.1);
             margin-top: 0;
             transition: all 0.5s ease-out;
             opacity: 0.5;
+         
+            
+            .page__img{
+             
+                &:hover{
+                    + .date{
+                        color: @color_yellow;
+                    }
+                }
+            }
+            &:hover{
+                   
+                opacity: 1;  
+            }
             .page__img{
                 position: relative;
                 max-width: 500px;
@@ -104,6 +119,9 @@
                 }
                 .value{
                     color: @color_white;
+                }
+                + .page-item{
+                    pointer-events: none;
                 }
             }
         }

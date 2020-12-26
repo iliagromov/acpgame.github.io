@@ -3444,11 +3444,19 @@ details[open] summary::after {
 
 .gallery-page .page-content .page-item {
   position: relative;
-  pointer-events: none;
+  cursor: pointer;
   margin-top: 0;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
   opacity: 0.5;
+}
+
+.gallery-page .page-content .page-item .page__img:hover + .date {
+  color: #ffed5c;
+}
+
+.gallery-page .page-content .page-item:hover {
+  opacity: 1;
 }
 
 .gallery-page .page-content .page-item .page__img {
@@ -3504,6 +3512,10 @@ details[open] summary::after {
 
 .gallery-page .page-content .page-item.tns-slide-active .value {
   color: #ffffff;
+}
+
+.gallery-page .page-content .page-item.tns-slide-active + .page-item {
+  pointer-events: none;
 }
 
 .gallery-page .page-content .slider.page-nav {
