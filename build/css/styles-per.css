@@ -4482,6 +4482,10 @@ details[open] summary::after {
   .gallery-page .page-content .slider.page-nav .page-nav {
     margin: 20px auto;
   }
+
+  .gallery .page-items .page-item {
+    width: 46.9%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -5523,6 +5527,14 @@ details[open] summary::after {
 
   .gallery-page .page-content .slider.page-nav .slider__actions {
     margin-left: 5%;
+  }
+
+  .gallery .page__title-h1_text-shadow_white span:nth-child(1) {
+    font-size: inherit;
+  }
+
+  .gallery .page-items .page-item {
+    width: 96.9%;
   }
 }
 

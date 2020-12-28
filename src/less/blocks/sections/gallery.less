@@ -7,6 +7,9 @@
                 &:nth-child(1){
                     font-size: 50px;
                     line-height: 100%;
+                    .xs-block({
+                        font-size: inherit;
+                    });
                 }
             }
         }
@@ -15,6 +18,8 @@
         .row-flex();
         .page-item{
             .size(2);
+            .size-smm(3);
+            .size-xs(6);
             cursor: pointer;
             position: relative;
             padding:10px;
