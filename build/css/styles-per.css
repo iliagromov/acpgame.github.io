@@ -1855,6 +1855,10 @@ details[open] summary::after {
   color: transparent;
 }
 
+.modal .page__icon {
+  border: none !important;
+}
+
 .modal__content {
   display: -webkit-box;
   display: flex;
