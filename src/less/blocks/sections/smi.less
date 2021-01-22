@@ -49,6 +49,33 @@
             &__video {
                 .size(3);
                 .size-smm(6);
+                box-sizing: border-box;
+                &:nth-child(odd){
+                    padding-right: 5px;
+                }
+                &:nth-child(even){
+                    padding-left: 5px;
+                }
+                .page__text{
+                    transition: all .5s ease;
+                }
+                .page__img{
+                    overflow: hidden;
+                    max-height: 390px;
+                    img{
+                       transition: all .5s ease;
+                    }
+                }
+                &:hover{
+                    .page__img{
+                        img{
+                            transform: scale(1.2);
+                        }
+                    }
+                    .date{
+                        color: @color_yellow;
+                    }
+                }
                 &-description {
                     flex-direction: column;
                     .date {
@@ -71,6 +98,27 @@
                 .page__text {
                     color: @color_gray;
                     margin: 20px 0 20px;
+                    transition: all .5s ease;
+                }
+                .page__img{
+                    overflow: hidden;
+                    max-height: 390px;
+                    img{
+                       transition: all .5s ease;
+                    }
+                }
+                &:hover{
+                    .page__img{
+                        img{
+                            transform: scale(1.2);
+                        }
+                    }
+                    .date{
+                        color: @color_yellow;
+                    }
+                    .name{
+                        color: @color_white;
+                    }
                 }
             }
         }

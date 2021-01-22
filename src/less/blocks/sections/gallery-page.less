@@ -1,6 +1,49 @@
 .gallery-page{
     background-color: transparent;
-    
+    overflow: hidden;
+    .cat-gallery_description{
+        color: #fff;
+        margin-bottom: 3%;
+    }
+    .content_pagination{
+        .pagination{
+            display: flex;
+            color: #fff;
+            align-items: flex-end;
+            justify-content: flex-end;
+            margin: 25px 5px;
+            &_item {
+                margin-bottom: 5px;
+                .pagination_page-active{
+                    font-size: 28px;
+                    line-height: 35px;
+                    padding: 0 5px;
+                }
+                a{
+                    padding: 0 5px;
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+            &_next{
+                .pagination_arrow{
+                    &::before{
+                        content: '>';
+                    }
+                }
+            }
+            &_prev{
+                .pagination_arrow{
+                    &::before{
+                        content: '<';
+                    }
+                }
+            }
+
+        }
+
+    }
+
     .page__title-h1{
         margin-bottom: 34px;
         &_text-shadow_white{

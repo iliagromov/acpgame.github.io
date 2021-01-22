@@ -1,8 +1,6 @@
 @battle-of-corporations-banner-margin:210px;
 .battle-of-corporations{
-    .page__text{
-        color: @color_black;
-    }
+    
    .xs-block({
     padding-bottom: 0;
    });
@@ -41,6 +39,8 @@
                         .size(3.4);
                         .size-xs(6);
                         padding-top: 10%;
+                        text-align: center;
+
                     }
                     .page__text{
                         .size(2);
@@ -205,6 +205,12 @@
                     .page__img{
                         display: flex;
                         position: relative;
+                        img{
+                            .xs-block({
+                                object-fit: cover;
+                                max-height: 244px;
+                            });
+                        }
                         &::after{
                             content: '';
                             position: absolute;

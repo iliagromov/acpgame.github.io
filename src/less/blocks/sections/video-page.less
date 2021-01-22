@@ -34,7 +34,10 @@
         }
         .page__btn{
             .shift-right(.5);
-
+            &.is-active{
+                color: #ffed5c;
+                border: 1px solid #ffed5c;
+               }
         }
     }
     .video-item-container{
@@ -44,6 +47,14 @@
         .page__img{
             .size(3);
             .size-xs(6);
+            padding-bottom: 5px;
+            box-sizing: border-box;
+            &:nth-child(odd){
+                padding-right: 5px;
+            }
+            &:nth-child(even){
+                padding-left: 5px;
+            }
         }
         &::after{
             content: '';
@@ -62,6 +73,7 @@
         .page-nav{
             margin-bottom: 0;
         }
+       
     }
     .slider.page-nav{
         position: relative;

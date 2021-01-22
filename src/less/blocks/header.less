@@ -47,6 +47,14 @@
             background-color: @color_yellow;
             display: flex;
             justify-content: center;
+            .page__btn{
+                box-shadow:none;
+                transition: none;
+                &:hover{
+                    filter: invert(1);
+                }
+            }
+          
         }
         &__menu{
             // .size(1);
@@ -72,6 +80,9 @@
                 .page__icon,
                 .page__text{
                     z-index: -1;
+                }
+                &:hover{
+                    box-shadow:none;
                 }
                
             }

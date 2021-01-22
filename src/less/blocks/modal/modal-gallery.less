@@ -1,7 +1,7 @@
 .modal-gallery{
     background-color: @color_black;
     .modal__action{
-        z-index: 10;
+        z-index: 100;
         .page__btn{
             &::before, 
             &::after{
@@ -16,15 +16,18 @@
         height: 100vh;
         // padding-top: 80px;
         padding-top: 6%;
-        .mmd-block({
-            overflow-y: scroll;
-        });
+        overflow-y: auto;
         .smm-block({
             overflow: hidden;
+        });
+        .xs-block({
+            overflow-y: auto;
+            padding-bottom: 70px;
         });
         &-text{
             position: absolute;
             left: 100px;
+            z-index: 10;
             .xs-block({
                 left: 10px;
                 position: relative;
@@ -50,11 +53,25 @@
                 margin: 0 auto;
                 #sliderModalGallery{
                     display: flex;
-                    align-items: center;
+                    // align-items: center;
+                    align-items: flex-start;
+                    .page__img {
+                        img{
+                            max-height: 500px;
+                        }
+                      
+                    }
+                    .page__link{
+                        display: block;
+                    }
                 }
             }
             &-preview{
                 .size(6);
+                .xs-block({
+                    opacity: 0;
+                });
+                align-self: flex-end;
                 .slider-thumbnails{
                     display: flex;
                     justify-content: center;
@@ -103,6 +120,14 @@
         .smm-block({
             justify-content: space-between;
         });
+
+        .xs-block({
+                justify-content: space-around;
+                top: 100%;
+                position: fixed;
+                z-index: 1;
+                transform: translateY(-100%);
+        });
         button{
             width: 70px;
             height: 70px;
@@ -130,6 +155,9 @@
                     transform: rotate(0deg);
                 }
             }
+            .xs-block({
+                border-color: @color_white;
+            });
         }
     }
 }

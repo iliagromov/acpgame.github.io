@@ -162,6 +162,12 @@
         &:hover{
             color: @color_yellow;
         }
+        &_active{
+            color: @color_yellow;
+            &:hover{
+                color: @color_white;
+            }
+        }
     }
 
     &__btn {
@@ -440,3 +446,29 @@
 
 }
 
+.page__form{
+    &_status{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .page__img{
+            transform: scale(2.5);
+            
+            .animated({
+                .fadeIn();
+            });
+        }
+        .page__text{
+            margin-top: 5%;
+        }
+    }
+    
+    &_success{
+
+    }
+    &_error{
+        .page__img{
+            transform: scale(2.5) rotate(180deg);
+        }
+    }
+}
