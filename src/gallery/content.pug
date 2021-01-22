@@ -1,7 +1,7 @@
-mixin itemVideo()
+mixin itemVideo(n)
     .page-item
         .page__img
-            img(src="assets/img/img-gallery-2.png")
+            img(src="assets/img/img-modal-gallery-"+n+".png")
         .page-item_bg.open-modal(data-modal="modal-gallery")
 
 .wrapper
@@ -11,11 +11,11 @@ mixin itemVideo()
             span наших игр
         
         .page-items
-                +itemVideo()
-                +itemVideo()
-                +itemVideo()
-                +itemVideo()
-                +itemVideo()
+                +itemVideo(2)
+                +itemVideo(1)
+                +itemVideo(2)
+                +itemVideo(2)
+                +itemVideo(2)
                 
 include ../blocks/mixins/mixin-next-section
 +nextSection('Следующий раздел', 'сми о нас', '../smi/smi.html')
