@@ -167,15 +167,21 @@ if(document.getElementById('sliderGallery')){
       lazyload: false,
       speed: 800,
       responsive: {
+        1920:{
+          loop: true,
+        },
         1025: {
-          items: 1
+          items: 1,
         },
         768:{
-          items: 2
+          items: 2,
         },
         620:{
-          items: 1
+          items: 1,
+         
         },
+        320:{
+        }
       }
       
     });

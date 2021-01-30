@@ -16,6 +16,7 @@
     }
     .page-items{
         .row-flex();
+       
         .page-item{
             .size(2);
             .size-smm(3);
@@ -25,14 +26,23 @@
             padding:10px;
             box-sizing: border-box;
             transition: all .5s ease-out;
+            max-height: 250px;
             &:hover{
                 padding:0;
+            }
+            &:active,
+            &:focus{
+                outline: none !important;
             }
             &_bg{
                 position: absolute;
                 top: 0;
                 width: 100%;
                 height: 100%;
+            }
+            .page__img{
+                max-height: 230px;
+                overflow: hidden;
             }
         }
     }

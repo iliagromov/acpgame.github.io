@@ -86,6 +86,11 @@
                         display: none;
                     });
                 }
+                .page__img{
+                    img{
+                        filter: grayscale(100%);
+                    }
+                }
             }
             &__preview {
                 padding-left: 36px;
@@ -126,9 +131,9 @@
                     img{
                         width: auto;
                         height: auto;
+                        filter: grayscale(100%);
                     }
-                    &:nth-of-type(1){
-                        padding-bottom: 23px;
+                    padding-bottom: 23px;
                         .md-block({
                             display: flex;
                             padding-right: 23px;
@@ -137,12 +142,16 @@
                         .xs-block({
                             padding-right: 0;
                         });
+                    &:nth-child(1){
+                        
                     }
                     .xs-block({
                         background-color: @color_gray;
                     });
                     &.tns-nav-active{
+                        display: none;
                         .xs-block({
+                            display: block;
                             background-color: @color_yellow;
                         });
                     }
